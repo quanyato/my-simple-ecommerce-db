@@ -20,7 +20,7 @@
 - kích hoạt khi DML một order_item: giúp tự động cập nhật lượt bán cho sản phẩm, số lượng tồn kho và tổng giá trị đơn hàng
 
 ### Logic nghiệp vụ bên lề:
-- Một đơn hàng có thể có rất nhiều trạng thái khác nhau. Ở trong CSDL này mình chỉ phân ra một số trạng thái dưới đây:
+-- Một đơn hàng có thể có rất nhiều trạng thái khác nhau. Ở trong CSDL này mình chỉ phân ra một số trạng thái dưới đây:
 + 1: chờ xác nhận - khách hàng đã đặt hàng, đặt đơn nhưng nhà bán hàng chưa check, chưa xác nhận đơn hàng
 + 2: Chờ lấy hàng - nhà bán hàng đã xác nhận đơn hàng và đang trong quá trình đóng gói hàng để giao cho bên vận chuyển.
 + 3: đang giao - đơn vị vận chuyển đã nhận gói hàng từ nhà bán và đang trên đường vận chuyển
@@ -30,6 +30,6 @@
 + 7: đã trả hàng - đơn vị vận chuyển giao trả thành công gói hàng về cho nhà bán hàng
 + 8: thất lạc - đơn vị vận chuyển giao đi hoặc giao trả không thành công gói hàng và không tìm thấy gói hàng
 
-- Các phương thức thanh toán trong bài này mình sử dụng:
+-- Các phương thức thanh toán trong bài này mình sử dụng:
 + 1: thanh toán bằng tiền mặt
 + 2: thanh toán chuyển khoản qua ngân hàng
